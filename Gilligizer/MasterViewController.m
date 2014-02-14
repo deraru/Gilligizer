@@ -48,6 +48,7 @@
     Show *show = [NSEntityDescription insertNewObjectForEntityForName:@"Show" inManagedObjectContext:context];
     show.desc = @"On this episode...";
     show.title = @"New Episode";
+    show.firstRun = [NSNumber numberWithBool:FALSE];
 
     NSInteger count = [[self.fetchedResultsController sections][0] numberOfObjects];
     show.episodeID = [NSNumber numberWithInteger:count];
